@@ -25,4 +25,4 @@ jobs:
          pip install xlrd==1.2.0
      # 运行测试
      - name: Run and generate
-       run: pytest Schedule
+       run: python Schedule.py
