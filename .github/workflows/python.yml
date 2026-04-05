@@ -25,4 +25,4 @@ jobs:
          pip install xlrd==1.2.0
      # 运行测试
      - name: Run tests
-       run: 日程转换
+       run: 日程转换.py
