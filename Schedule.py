@@ -271,7 +271,7 @@ def main():
     #print("请将文件拖入此处并回车: ", end="", flush=True)
     #file_in_addr = input().strip().strip('"')  # 去除 Windows 拖入时可能产生的引号
     file_in_addr = "学生个人课表_24071224.xls"
-    file_out_addr = "/out/" + file_in_addr + ".ics"
+    file_out_addr = "out/" + file_in_addr + ".ics"
     
     # 打开 .xls 文件
     try:
