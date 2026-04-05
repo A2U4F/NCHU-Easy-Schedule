@@ -270,7 +270,7 @@ def main():
     
     #print("请将文件拖入此处并回车: ", end="", flush=True)
     #file_in_addr = input().strip().strip('"')  # 去除 Windows 拖入时可能产生的引号
-    file_in_addr = "课表日程转换\\学生个人课表_24071224.xls"
+    file_in_addr = "学生个人课表_24071224.xls"
     file_out_addr = file_in_addr + ".ics"
     
     # 打开 .xls 文件
@@ -285,7 +285,7 @@ def main():
     
     # 打开配置文件
     try:
-        with open("课表日程转换\\Configuration.json",'r') as f:
+        with open("Configuration.json",'r') as f:
             Configuration= json.load(f)
     except:
         print("打开配置文件出错:",sys.exc_info()[0])
