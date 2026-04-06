@@ -268,10 +268,19 @@ def main():
         import io
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     
+    # 打开配置文件
+    try:
+        with open("Configuration.json",'r') as f:
+            Configuration= json.load(f)
+    except:
+        print("打开配置文件出错:",sys.exc_info()[0])
+        return
+    
+    # 设置文件路径
     #print("请将文件拖入此处并回车: ", end="", flush=True)
     #file_in_addr = input().strip().strip('"')  # 去除 Windows 拖入时可能产生的引号
-    file_in_addr = "学生个人课表_24071224.xls"
-    file_out_addr = file_in_addr + ".ics"
+    file_in_addr: str = Configuration["Path"]
+    file_out_addr: str = file_in_addr + ".ics"
     
     # 打开 .xls 文件
     try:
@@ -283,13 +292,6 @@ def main():
         input("按回车键退出...")
         return
     
-    # 打开配置文件
-    try:
-        with open("Configuration.json",'r') as f:
-            Configuration= json.load(f)
-    except:
-        print("打开配置文件出错:",sys.exc_info()[0])
-        return
 
     # 设置总日历变量
     Cal = CourseCalender(Configuration)
