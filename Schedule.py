@@ -168,7 +168,6 @@ class CourseCalender:
                 self.holiday[tuple(date)]="NoAdjustment"
             
             for date in days["Holiday adjustment"]:
-                self.holiday[tuple(date[0])]="ThisDayIsReplaced"
                 self.holiday[tuple(date[1])]=tuple(date[0])
         
         self.CreatingTime = datetime.now()
@@ -222,7 +221,7 @@ class CourseCalender:
                     cls.time["begin"] += Delta
                     cls.time["end"] += Delta
                     new_course_list.append(cls)
-                # Condition == "NoAdjustment" or "ThisDayIsReplaced"时直接丢弃（不加入新列表）
+                # Condition == "NoAdjustment" 时直接丢弃（不加入新列表）
             
             self.Course[name] = new_course_list
     
