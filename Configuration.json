@@ -1,6 +1,6 @@
 {
     "Path" : "学生个人课表_24071224.xls",
-    "firstday" : [2026, 3, 2],
+    "firstday" : [2026, 8, 31],
     "Holiday" : {
         "New Year's Day" : {
             "Holiday period" : [
